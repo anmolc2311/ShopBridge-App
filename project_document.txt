@@ -1,0 +1,57 @@
+* Login Credentials :- 
+
+username: admin
+password: admin
+
+------------------------------------------------------------------------------------------------
+
+* Refer the below steps to run ShopBridge App :-
+
+- Clone app from github repo.
+- Run "npm install" command to install all dependencies.
+- Run "npm install json-server --save" command to install json-server.
+- Run "npm run dev" command to execute ShopBridge app as well as json-api.
+- Open "http://localhost:4200/" url on chrome browser.
+
+------------------------------------------------------------------------------------------------
+
+* Refer the below stepsto deploy ShopBridge App on production server :-
+
+- Run "ng build --prod" command to make production build.
+- You will get dist folder after a build command.
+- Open dist/${project-name} folder, you will get all build files.
+- Upload all files on production server.
+
+------------------------------------------------------------------------------------------------
+
+* List of Pages on ShopBridge App :-
+
+- Home Page : http://localhost:4200/homepage
+- Login Page :  http://localhost:4200/login
+- Dashboard Page : http://localhost:4200/product-dashboard
+- Product-Details : http://localhost:4200/product-details/${productId}
+- Add Product Page : http://localhost:4200/add-product
+- Edit Product Page : http://localhost:4200/edit-product/${productId}
+
+------------------------------------------------------------------------------------------------
+
+* Features Implemented on ShopBridge App :-
+
+- Display all product on homepage & filter products by category.
+- Login & Logout functionality with authentication.
+- Product dashboard to display list of all products.
+- Pagination & category search functionality on dashboard page.
+- Add & Edit product.
+- Display product details with product-detail page.
+- Breadcrumb for secondary navigation.
+- Wildcard route handling for 404 page-not-found.
+- Error handling using interceptor.
+- Data sharing between components i.e. component interaction.
+- Custom pipe for search category.
+- Global service with reusable function for http request & common functionality.
+- Auth guard for to authenticate route paths.
+- Constanst for accessible anywhere over a app.
+- Shared/Reusable component like product-card & product-category.
+- Json fake api to CRUD(Create Read Update Delete) operation.
+- Currency format.
+- Responsive UI.

@@ -1,0 +1,36 @@
+<div class="wrapper p-15">
+    <div class="card form-wrapper border-primary">
+        <div class="card-header bg-primary" style="margin-right: -1px;">
+            <h4 class="card-title text-white m-0 text-center">Login</h4>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="userLogin" (ngSubmit)="checkLogin()">
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Username</label>
+                    <input type="text" formControlName="uname" (keydown.space)="$event.preventDefault()" maxlength="20"
+                        class="form-control" placeholder="Enter Username" />
+                    <div class="form-text text-danger" *ngIf="l.uname.touched && l.uname.invalid">
+                        <div *ngIf="l.uname.errors.required">Please enter username.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Password</label>
+                    <div class="input-group mb-3">
+                        <input [type]="isPwd ? 'password' : 'text'" formControlName="upass"
+                            (keydown.space)="$event.preventDefault()" maxlength="20" class="form-control"
+                            placeholder="Enter Password" />
+                        <span class="input-group-text pwd-show-btn cursor" (click)="isPwd = !isPwd">
+                            <i class="fa fa-eye" [ngClass]="{'fa-eye':isPwd,'fa-eye-slash':!isPwd}"></i>
+                        </span>
+                    </div>
+                    <div class="form-text text-danger" *ngIf="l.upass.touched && l.upass.invalid">
+                        <div *ngIf="l.upass.errors.required">Please enter password.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" [disabled]="!userLogin.valid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

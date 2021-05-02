@@ -1,0 +1,164 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Redmi 9",
+      "description": "Redmi 9 comes with Octa-core Helio G35 processor and upto 2.3GHz clock speed. It also comes with 13+2MP Dual AI Rear camera along with 5 MP front camera. Redmi 9 also features 16.58 centimeters (6.53-inch) HD + display with 720x1600 pixels. It also comes with 5000 mAH large battery and Fingerprint sensor",
+      "price": "8499",
+      "color": "#17202A",
+      "category": "mobiles",
+      "quantity": "4"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy M31s",
+      "description": "With Samsung Galaxy M31s, Samsung introduces a 6000 mAh battery with a 25 Watt Fast charger for the first time in this price segment- along with all round features comprising of a 64 MP rear camera in Quad camera set up and an immersive + sAMOLED Infinity-O Display.",
+      "price": "16999",
+      "color": "#F7DC6F",
+      "category": "mobiles",
+      "quantity": "3"
+    },
+    {
+      "id": 3,
+      "name": "OnePlus Nord 5G",
+      "description": "Nord, the latest product line by the Number 1 premium smartphone in India - OnePlus, brings together Exceptional Cameras, Smooth Experience and OnePlus Quality and Trust to the consumers. Nord comes with the same 48 MP Sony IMX586 sensor as the OnePlus 8 to reduce blur and shakiness from photos and video clips.",
+      "price": "29999",
+      "color": "#E67E22",
+      "category": "mobiles",
+      "quantity": "4"
+    },
+    {
+      "name": "Oppo A31",
+      "category": "mobiles",
+      "price": "10990",
+      "quantity": "4",
+      "color": "#a5f3c7",
+      "description": "Packed with a host of features, it scores high in terms of functionality. This makes it a must-have.",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Vivo Y91i",
+      "description": "The Vivo Y91i smartphone comes with 13 MP rear camera, 5 MP front camera, Helio P22 octa core processor, 2 GB RAM, 32 GB internal memory expandable up to 256 GB, 15.80 cm (6.22) HD plus Halo Full view display, a massive 4030mAh battery and much more.",
+      "price": "7990",
+      "color": "#148F77",
+      "category": "mobiles",
+      "quantity": "5"
+    },
+    {
+      "id": 6,
+      "name": "Panasonic Eluga i7",
+      "description": "The Panasonic Eluga I7 lets you explore far and wide, with a hassle free performance The world awaits with open arms and the only thing you need is the right tool to find your passion. Eluga I7 with its larger than life features helps you reach all that you desire.",
+      "price": "5000",
+      "color": "#3498DB",
+      "category": "mobiles",
+      "quantity": "2"
+    },
+    {
+      "id": 7,
+      "name": "Noise Colorfit Pro 2",
+      "description": "ColorFit Pro 2 is our latest smartwatch with a stylish new design and a gorgeous 1.3 full touch colour display.",
+      "price": "2499",
+      "color": "#F1C40F",
+      "category": "watches",
+      "quantity": "4"
+    },
+    {
+      "id": 8,
+      "name": "TIMEWEAR",
+      "description": "Stay fashionable with this watch from TIMEWEAR available on Amazon. This Analogue watch has Round Dial. The Silver colored straps in the watch are Stylish.",
+      "price": "309",
+      "color": "#8E44AD",
+      "category": "watches",
+      "quantity": "3"
+    },
+    {
+      "id": 9,
+      "name": "SKMEI Digital",
+      "description": "Stay fashionable with Japanese Quartz watch from SKMEI available on Amazon. This Digital watch has Round Black Dial. The Black colored straps in the watch are Stylish.",
+      "price": "421",
+      "color": "#EC7063",
+      "category": "watches",
+      "quantity": "5"
+    },
+    {
+      "id": 10,
+      "name": "Acnos Army",
+      "description": "The watch comes with features such as day and date display and features a stylish camouflage design which gives this timepiece a fresh appeal.",
+      "price": "310",
+      "color": "#82E0AA",
+      "category": "watches",
+      "quantity": "5"
+    },
+    {
+      "id": 11,
+      "name": "Fire-Boltt SPO2",
+      "description": "A good-looking and affordable smartwatch for SPO2, heart rate,BP, fitness & sports tracking.",
+      "price": "2799",
+      "color": "#9A7D0A",
+      "category": "watches",
+      "quantity": "5"
+    },
+    {
+      "id": 13,
+      "name": "Lenovo ThinkPad E15",
+      "description": "The ThinkPad E15 Gen 2 laptop harnesses the power of an 11th Gen Intel® Core™ processor along with DDR4 memory.",
+      "price": "60990",
+      "color": "#616A6B",
+      "category": "computers",
+      "quantity": "5"
+    },
+    {
+      "id": 14,
+      "name": "HP Pavilion Gaming",
+      "description": "Sacrifice nothing with the thin and powerful HP Pavilion Gaming 15 Laptop. Experience high-grade graphics and processing power for gaming and multitasking, plus improved thermal cooling for overall performance and stability.",
+      "price": "64990",
+      "color": "#34495E",
+      "category": "computers",
+      "quantity": "5"
+    },
+    {
+      "id": 15,
+      "name": "Dell XPS 9310",
+      "description": "13.4 FHD+ Non-Touch Silver / i5 TGL-U / 8 GB / 512 SSD / UMA / 1Yr Premium Plus / Win 10 / MS-Office H&S 2019",
+      "price": "134278",
+      "color": "#273746",
+      "category": "computers",
+      "quantity": "5"
+    },
+    {
+      "id": 16,
+      "name": "ASUS ZenBook",
+      "description": "The distinctive ZenBook Flip S combines elegant sophistication with an all-new design that makes it more desirable than ever.",
+      "price": "147207",
+      "color": "#85929E",
+      "category": "computers",
+      "quantity": "5"
+    },
+    {
+      "id": 17,
+      "name": "Acer Swift 5",
+      "description": "This laptop is lightweight and its battery can offer a runtime of up to 17 hours on a single full charge, making it your ideal travel companion.",
+      "price": "91490",
+      "color": "#17202A",
+      "category": "computers",
+      "quantity": "5"
+    },
+    {
+      "id": 18,
+      "name": "MI Notebook",
+      "description": "The Mi Notebook 14 is very compact, thin, and weighs just 1.5kg.",
+      "price": "41999",
+      "color": "#E59866",
+      "category": "computers",
+      "quantity": "5"
+    }
+  ],
+  "logins": [
+    {
+      "id": 1,
+      "uname": "admin",
+      "upass": "admin"
+    }
+  ]
+}

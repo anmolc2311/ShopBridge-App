@@ -1,0 +1,75 @@
+<div class="container wrapper p-15">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb  bg-transparent">
+            <li class="breadcrumb-item mr-2" *ngIf="isLogin"><a href="javascript:void(0)" [routerLink]="DashboardPage"
+                    class="pr-15">Dashboard</a><i class="fa fa-angle-right" style="color: #6c757d;"
+                    aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active" aria-current="page">{{title}} Product</li>
+        </ol>
+    </nav>
+    <div class="card form-wrapper border-primary">
+        <div class="card-header bg-primary" style="margin-right: -1px;">
+            <h4 class="card-title text-white m-0 text-center">{{title}} Product</h4>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="productForm" (ngSubmit)="submitProduct()">
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Name:</label>
+                    <input type="text" formControlName="name" maxlength="50" class="form-control"
+                        placeholder="Enter Product Name" />
+                    <div class="form-text text-danger" *ngIf="f.name.touched && f.name.invalid">
+                        <div *ngIf="f.name.errors.required">Please enter product name.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Category:</label>
+                    <select formControlName="category" class="form-control">
+                        <option value="" disabled>Select Category</option>
+                        <option *ngFor="let cat of categories" [value]="cat">{{cat|titlecase}}</option>
+                    </select>
+                    <div class="form-text text-danger" *ngIf="f.category.touched && f.category.invalid">
+                        <div *ngIf="f.category.errors.required">Please select category.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Price:</label>
+                    <input type="text" formControlName="price" (keydown.space)="$event.preventDefault()" maxlength="5"
+                        class="form-control" placeholder="Enter price" />
+                    <div class="form-text text-danger" *ngIf="f.price.touched && f.price.invalid">
+                        <div *ngIf="f.price.errors.required">Please enter price.</div>
+                        <div *ngIf="f.price.errors.pattern">Price should be a numeric.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Quantity:</label>
+                    <input type="text" formControlName="quantity" (keydown.space)="$event.preventDefault()"
+                        maxlength="5" class="form-control" placeholder="Enter quantity" />
+                    <div class="form-text text-danger" *ngIf="f.quantity.touched && f.quantity.invalid">
+                        <div *ngIf="f.quantity.errors.required">Please enter quantity.</div>
+                        <div *ngIf="f.quantity.errors.pattern">Quantity should be a numeric.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Color:</label>
+                    <input type="color" formControlName="color" class="form-control" />
+                    <div class="form-text text-danger" *ngIf="f.color.touched && f.color.invalid">
+                        <div *ngIf="f.color.errors.required">Please select color.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label font-weight-medium">Description:</label>
+                    <textarea formControlName="description" maxlength="500" class="form-control"
+                        placeholder="Enter description"></textarea>
+                    <div class="form-text text-danger" *ngIf="f.description.touched && f.description.invalid">
+                        <div *ngIf="f.description.errors.required">Please enter username.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" [disabled]="!productForm.valid">Submit</button>&nbsp;
+                    <button type="button" class="btn btn-primary" [routerLink]="DashboardPage">Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

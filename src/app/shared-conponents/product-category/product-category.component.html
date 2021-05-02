@@ -1,0 +1,27 @@
+<div class="card">
+    <h5 class="card-header">
+        {{title}}
+    </h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="form-check cursor">
+                <input class="form-check-input" type="radio" name="category" checked
+                    (click)="emitCategory('all')" id="allCategory" value="all">
+                <label class="form-check-label cursor" for="allCategory">
+                    All Category
+                </label>
+            </div>
+        </li>
+        <ng-container *ngFor="let item of categories; let i = index">
+            <li class="list-group-item">
+                <div class="form-check cursor">
+                    <input class="form-check-input" type="radio" name="category" (click)="emitCategory(item)"
+                        [id]="'category'+i" [value]="item">
+                    <label class="form-check-label cursor" [for]="'category'+i">
+                        {{item | titlecase}}
+                    </label>
+                </div>
+            </li>
+        </ng-container>
+    </ul>
+</div>

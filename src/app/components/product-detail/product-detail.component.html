@@ -1,0 +1,32 @@
+<div class="container wrapper">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb  bg-transparent">
+            <li class="breadcrumb-item mr-2" *ngIf="isLogin"><a href="javascript:void(0)" [routerLink]="DashboardPage"
+                    class="pr-15">Dashboard</a><i class="fa fa-angle-right" style="color: #6c757d;"
+                    aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+        </ol>
+    </nav>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./assets/img/product_img.png" class="detail-product-img" alt="product">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <h5 class="card-title">{{product?.name}}</h5>
+                        <button type="button" class="btn btn-outline-primary btn-sm" *ngIf="isLogin" [routerLink]="[EditProductPage,product?.id]">Edit</button>
+                    </div>
+                    <p class="card-text"><span class="font-weight-medium">Price: </span>&#x20B9;{{getCurrency(product?.price)}}</p>
+                    <p class="card-text"><span class="font-weight-medium">Category: </span>{{product?.category | titlecase}}</p>
+                    <p class="card-text"><span class="font-weight-medium">Quantity: </span>{{product?.quantity}}</p>
+                    <p class="card-text"><span class="font-weight-medium">Stock: </span> <span [ngClass]="product?.quantity > 0 ? 'text-success' : 'text-danger'">{{product?.quantity > 0 ?
+                            'Available' : 'Not Available'}}</span></p>
+                    <p class="card-text"><span class="font-weight-medium">Color: </span><span class="color-picker" [style.background-color]="product?.color"></span></p>
+                    <p class="card-text"><span class="font-weight-medium">Description:</span><br/><span class="text-muted text-justify">{{product?.description}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

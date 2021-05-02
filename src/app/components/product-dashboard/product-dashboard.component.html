@@ -1,0 +1,49 @@
+<div class="container wrapper">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent">
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </nav>
+    <div class="d-flex flex-wrap justify-content-between align-items-baseline">
+        <input type="text" class="form-control search-input mb-3" [(ngModel)]="searchText" (ngModelChange)="resetPageNo()" placeholder="Search by category" />
+        <button class="btn btn-primary btn-sm mb-3" [routerLink]="[AddProductPage]">Add Product</button>
+
+    </div>
+
+    <table class="table table-responsive-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">Stock</th>
+                <th scope="col" class="text-center">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let p of products | filter: searchText :'category' | paginate: { itemsPerPage: perPage, currentPage: p }  ; let i = index">
+                <tr>
+                    <th scope="row">{{p.srNo}}</th>
+                    <td>{{p.name}}</td>
+                    <td>{{p.category}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.quantity}}</td>
+                    <td><span [ngClass]="p.quantity > 0 ? 'text-success' : 'text-danger'">{{p.quantity > 0 ? 'Available' : 'Not Available'}}</span></td>
+                    <td class="text-center">
+                        <button class="btn btn-link" [routerLink]="[ProductDetailPage,p.id]">View</button> |
+                        <button class="btn btn-link" [routerLink]="[EditProductPage,p.id]">Edit</button> |
+                        <button class="btn btn-link" (click)="deleteProduct(p)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+            <tr *ngIf="!(products | filter: searchText :'category').length">
+                <td colspan="7" ><h5 class="text-center">No record found for searched category.</h5></td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

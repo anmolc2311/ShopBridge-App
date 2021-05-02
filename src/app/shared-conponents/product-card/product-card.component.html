@@ -1,0 +1,15 @@
+<div class="card">
+    <img src="./assets/img/product_img.png" class="card-img-top h-150" [alt]="product.name">
+    <div class="card-body">
+        <h5 class="card-title text-ellipse">{{product.name}}</h5>
+        <p class="card-text">Price: &#x20B9;{{getCurrency(product.price)}}</p>
+        <p class="card-text">Stock: <span
+                [ngClass]="product.quantity > 0 ? 'text-success' : 'text-danger'">{{product.quantity > 0 ?
+                'Available' : 'Not Available'}}</span></p>
+        <p class="card-text">Color: <span class="color-picker"
+                [style.background-color]="product.color"></span></p>
+        <p class="card-text d-flex justify-content-center"><a class="btn btn-link"
+                [routerLink]="[ViewDetailPageUrl,product.id]">View
+                Details</a></p>
+    </div>
+</div>

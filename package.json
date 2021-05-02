@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "db": "cd src/db && json-server -p 8000 data.json",
+    "dev": "concurrently \"npm run db\" \"npm run start\""
   },
   "private": true,
   "dependencies": {
@@ -19,7 +21,12 @@
     "@angular/platform-browser": "~11.0.3",
     "@angular/platform-browser-dynamic": "~11.0.3",
     "@angular/router": "~11.0.3",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^6.0.2",
+    "ngx-bootstrap": "^6.2.0",
+    "ngx-pagination": "^5.0.0",
     "rxjs": "~6.6.0",
+    "subsink": "^1.0.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
