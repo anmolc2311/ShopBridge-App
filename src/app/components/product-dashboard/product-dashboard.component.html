@@ -5,7 +5,7 @@
         </ol>
     </nav>
     <div class="d-flex flex-wrap justify-content-between align-items-baseline">
-        <input type="text" class="form-control search-input mb-3" [(ngModel)]="searchText" (ngModelChange)="resetPageNo()" placeholder="Search by category" />
+        <input type="search" class="form-control search-input mb-3" [(ngModel)]="searchText" (ngModelChange)="resetPageNo()" placeholder="Search by category" />
         <button class="btn btn-primary btn-sm mb-3" [routerLink]="[AddProductPage]">Add Product</button>
 
     </div>

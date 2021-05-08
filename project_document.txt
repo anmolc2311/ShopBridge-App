@@ -53,5 +53,5 @@ password: admin
 - Constanst for accessible anywhere over a app.
 - Shared/Reusable component like product-card & product-category.
 - Json fake api to CRUD(Create Read Update Delete) operation.
-- Currency format.
+- Currency format. // optional
 - Responsive UI.

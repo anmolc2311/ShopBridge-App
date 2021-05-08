@@ -19,15 +19,6 @@
       "quantity": "3"
     },
     {
-      "id": 3,
-      "name": "OnePlus Nord 5G",
-      "description": "Nord, the latest product line by the Number 1 premium smartphone in India - OnePlus, brings together Exceptional Cameras, Smooth Experience and OnePlus Quality and Trust to the consumers. Nord comes with the same 48 MP Sony IMX586 sensor as the OnePlus 8 to reduce blur and shakiness from photos and video clips.",
-      "price": "29999",
-      "color": "#E67E22",
-      "category": "mobiles",
-      "quantity": "4"
-    },
-    {
       "name": "Oppo A31",
       "category": "mobiles",
       "price": "10990",
@@ -152,6 +143,15 @@
       "color": "#E59866",
       "category": "computers",
       "quantity": "5"
+    },
+    {
+      "name": "pc",
+      "category": "computers",
+      "price": "25000",
+      "quantity": "2",
+      "color": "#896767",
+      "description": "This is a PC.",
+      "id": 19
     }
   ],
   "logins": [
